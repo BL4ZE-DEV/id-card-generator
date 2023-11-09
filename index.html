@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id card</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+      
+<style>
+    #final_card{
+        display: none; 
+    }
+</style>
+       
+</head>
+<body>
+<div class="container-xl">
+    <h3 class="text-center">Input Your information and Click Submit to <br>generate your id card</h3>
+    <h2 class="text-center mb-4 mt-2">Identity Card Generator</h2>
+    <form id="info_input">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <b><label for="firstName">First Name</label></b>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="form-group col-md-6">
+            <b><label for="lastName">Last Name</label></b>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <b><label for="dob">Date of Birth</label></b>
+                <input type="date" class="form-control" id="dob" required>
+            </div>
+            <div class="form-group col-md-6">
+                <b><label for="country">Country</label></b>
+                <input type="text" class="form-control" id="country" required>                    
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <b><label for="State">State</label></b>                                         
+                <input type="text" class="form-control" id="state" required>
+            </div>
+            <div class="form-group col-md-6">
+                <b><label for="Gender">Gender</label></b>
+                <select class="form-control" id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="generateIdCard()"><b>SUBMIT INFO</b></button>
+    </form>
+
+    <div id="final_card" class="card bg-primary text-center text-white">
+        <div class="card-body">
+            <h1 class="card-title">GENERATED IDCard</h1>
+            <div class="row bg-white text-info container" style="margin-left: 2px;">
+                <div class="col-md-6">
+                    <img src="img_avatar1.png" class="img-fluid img-thumbnail mt-4"  >
+                </div>
+                <div class="col-md-6">
+                    <h3><b><p id="result" style="line-height: 5.0; font-size: 20px; margin-right: 2px;"></p></b></h3>
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary mt-2 " onclick="toggleForm()">Edit Information</button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    dinput=document.getElementById('info_input');
+    dfinal=document.getElementById('final_card');
+    function generateIdCard()           {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var dob = document.getElementById('dob').value;
+        var country = document.getElementById('country').value;
+        var state = document.getElementById('state').value;
+        var gender = document.getElementById('gender').value;
+  
+        "<b>"
+        var result = "Name: " + firstName + " " + lastName + "<br>";
+        result += "Date of Birth: " + dob + "<br>";
+        result += "Country: " + country + "<br>";
+        result += "State: " + state + "<br>";
+        result += "Gender: " + gender;
+        "</b>"
+        document.getElementById('result').innerHTML = result;
+
+        document.getElementById('info_input').style.display = 'none';
+        document.getElementById('final_card').style.display = 'block';
+    }
+
+    function toggleForm() {
+        document.getElementById('info_input').style.display = 'block';
+        document.getElementById('final_card').style.display = 'none';
+       
+    }
+    
+     
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
